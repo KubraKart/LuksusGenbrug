@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 const user = localStorage.getItem("user");
 if (!user) {
-    location.href = "/login.html";
+    location.href = "/scr/view/login.html";
 }
 
 document.getElementById("delete").addEventListener("submit", (event) => {
@@ -52,7 +52,7 @@ refresh.addEventListener('click', async() => {
     <th>Image</th>
     <tr/>
     `;
-    await fetch('http://localhost:9000/items', {
+    await fetch('http://localhost:8080/items', {
         method: 'GET'
     })
     .then((res) => res.json())
