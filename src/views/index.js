@@ -9,7 +9,7 @@ document.getElementById("delete").addEventListener("submit", (event) => {
 
     const user = JSON.parse(localStorage.getItem("user"));
 
-    fetch("http://localhost:8080/users/delete", {
+    fetch("http://localhost:5500/users/delete", {
         method: "DELETE", 
         headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ form.addEventListener("submit", async(e) => {
 
     const formData = new FormData(form);
 
-    await fetch('http://localhost:8080/item', {
+    await fetch('http://localhost:5500/item', {
         method: 'POST',
         body: formData
     });
@@ -43,16 +43,16 @@ form.addEventListener("submit", async(e) => {
 
 let refresh = document.getElementById('refresh');
 let list = document.getElementById('list');
-refresh.addEventListener('click', async() => {
-    list.innerHTML =`
+refresh.addEventListener('click', async () => {
+    list.innerHTML = `
     <tr>
-    <th>Title</th>
-    <th>Price</th>
-    <th>Brand</th>
-    <th>Image</th>
+    <th>Title</th>    
+    <th>Price</th>   
+    <th>Brand</th>   
+    <th>Image</th>  
     <tr/>
     `;
-    await fetch('http://localhost:8080/items', {
+    await fetch('http://localhost:5500/items', {
         method: 'GET'
     })
     .then((res) => res.json())
@@ -62,12 +62,13 @@ refresh.addEventListener('click', async() => {
         res.forEach((e) => {
             list.innerHTML += `
             <tr>
-            <td> ${e.title}</td>
-            <td> ${e.price}</td>
-            <td> ${e.brand}</td>
-            <td><img src="${e.thumbnail}" style="height:100px;width:100px;"/></td>
+                <td>${e.title}</td>  
+                <td>${e.price}</td>      
+                <td>${e.brand}</td>     
+                <td><img src="${e.thumbnail}" style="height:100px;width:100px;"/></td>      
             <tr/>
             `;
-        })
-    });
+        });
+
+    })
 });

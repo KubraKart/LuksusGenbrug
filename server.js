@@ -1,7 +1,7 @@
 const express = require("express");
 const formData = require('express-form-data');
 const app = express();
-const PORT = 8080;
+const PORT = 5500;
 
 const profilKontrol = require("./src/controllers/profil-controller");
 

@@ -9,20 +9,33 @@
 <div class="container px-4">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light"><a href="/src/views/login.html" class="btn"> Login</a></div>
+     <div class="p-3 border bg-light"><a href="/login.html" class="btn"> Login</a></div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light"> <a href="/src/views/register.html" class="btn"> Register</a></div>
+      <div class="p-3 border bg-light"> <a href="/register.html" class="btn"> Register</a></div>
     </div>
     <div class="col">
-        <div class="p-3 border bg-light">  <a href="/src/views/createItem.html" class="btn"> Create Item</a></div>
+        <div class="p-3 border bg-light">  <a href="/createItem.html" class="btn"> Create Item</a></div>
       </div>
   </div>
-</div>
-    
-  
- 
+  <h1>Opret Varer</h1>
+  <form id="submitForm">
+     Title: <input placeholder= "Varer" type="input" name="title"><br/>
+     Price: <input placeholder= "Pris" type="number" name="price"><br/>
+     Brand: <select name="brand">
+          <option value="Telefoner">Telefoner</option>
+          <option value="Biler">Biler</option>
+          <option value="Kjoler">Kjoler</option>
+          <option value="Bluser">Bluser</option>
+      </select> 
 
-   
+    File:  <input type="file" name="thumbnail"><br/>
+    Submit:  <button type="submit">Opret varer</button>
+  </form>
+      
+    Refresh:<button id="refresh">refresh</button>
+    <table id="list"></table>
+
+</div>
 </body>
 </html>

@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const password = document.getElementById("password").value
 
         const user = {
-            email: email, 
+            email: email,  
             password: password,
         };
 
-        fetch("http://localhost:8080/users/create", {
+        fetch("http://localhost:5500/users/create", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
