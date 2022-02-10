@@ -34,4 +34,4 @@ app.use("/users", profilKontrol);
 
 app.listen(PORT, () => {
     console.log(`server is listening http://localhost:${PORT}`)
-})
+});

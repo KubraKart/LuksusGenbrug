@@ -29,6 +29,7 @@ document.getElementById("delete").addEventListener("submit", (event) => {
 });
 });
 
+
 let form = document.getElementById("submitForm");
 form.addEventListener("submit", async(e) => {
     e.preventDefault();
@@ -46,10 +47,10 @@ let list = document.getElementById('list');
 refresh.addEventListener('click', async () => {
     list.innerHTML = `
     <tr>
-    <th>Title</th>    
-    <th>Price</th>   
-    <th>Brand</th>   
-    <th>Image</th>  
+    <th>title</th>    
+    <th>price</th>   
+    <th>brand</th>   
+    <th>image</th>  
     <tr/>
     `;
     await fetch('http://localhost:5500/items', {
