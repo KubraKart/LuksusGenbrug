@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 const user = localStorage.getItem("user");
 if (!user) {
-    location.href = "/scr/view/login.html";
+    location.href = "/login.html";
 }
 
 document.getElementById("delete").addEventListener("submit", (event) => {
