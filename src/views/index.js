@@ -1,3 +1,9 @@
+document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("user");
+    location.href = "/login.html";
+  });
+
+
 document.addEventListener("DOMContentLoaded", (event) => {
 const user = localStorage.getItem("user");
 if (!user) {
