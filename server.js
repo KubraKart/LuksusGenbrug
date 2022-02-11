@@ -32,6 +32,8 @@ app.get('/items', (req,res) => {
 
 app.use("/users", profilKontrol);
 
+app.get
+
 app.listen(PORT, () => {
     console.log(`server is listening http://localhost:${PORT}`)
 });

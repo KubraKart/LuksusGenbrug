@@ -10,7 +10,7 @@ if (!user) {
     location.href = "/login.html";
 }
 
-document.getElementById("delete").addEventListener("submit", (event) => {
+document.getElementById("deleteuser").addEventListener("submit", (event) => {
     event.preventDefault();
 
     const user = JSON.parse(localStorage.getItem("user"));

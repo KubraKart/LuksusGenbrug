@@ -11,16 +11,14 @@
 <div class="container px-4">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light"><a href="/login.html" class="btn"> Login</a></div>
-    </div>
-    <div class="col">
-      <div class="p-3 border bg-light"> <a href="/register.html" class="btn"> Register</a></div>
-    </div>
-    <div class="col">
       <div class="p-3 border bg-light"> <a href="/update.html" class="btn"> Opdater bruger</a></div>
     </div>
+
+    <form id="deleteuser">
+      <input value="delete"type="submit">
+    </form>
   
-  <h1>Opret Varer</h1>
+  <h2>Opret Varer</h2>
   <form id="submitForm">
      Title: <input type= "input" name="title"><br/>
      Price: <input type= "number" name="price"><br/>
@@ -39,6 +37,9 @@
     <table id="list">
 
     </table>
+
+    <link rel="stylesheet" href="index.css">
+
     <script src="index.js"></script>
 </body>
 </html>
